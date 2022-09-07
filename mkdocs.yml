@@ -1,0 +1,15 @@
+site_name: My Docs
+
+nav:
+    - Data request: data.md
+    - Metadata: metadata.md
+    - SAC: sac.md
+    - SEISAN: seisan.md
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
+
+theme: readthedocs
