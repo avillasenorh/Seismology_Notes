@@ -1,10 +1,23 @@
-site_name: My Docs
+site_name: Seismology Notes
 
 nav:
-    - Data request: data.md
-    - Metadata: metadata.md
-    - SAC: sac.md
-    - SEISAN: seisan.md
+    - Data and metadata:
+        - Data requests: requests.md
+        - Metadata formats: metadata.md
+        - Hypocenter formats: phase.md
+        - Waveform data formats: waveform.md
+    - Seismic analysis:
+        - SAC: sac.md
+        - SEISAN: seisan.md
+    - Phase Picking:
+        - Filterpicker: filterpicker.md
+        - Deep Learning pickers: deep_learning.md
+    - Earthquake Location:
+        - Hypocenter: hypocenter.md
+        - NonLinLoc: nonlinloc.md
+    - Focal Mechanisms:
+        - Waveform inversion: waveform_inversion.md
+        - Spectral amplitudes: spectral_amplitudes.md
 
 extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
