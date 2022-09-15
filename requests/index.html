@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>SEISAN - Seismology Notes</title>
+  <title>Data requests - Seismology Notes</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "SEISAN";
-    var mkdocs_page_input_path = "seisan.md";
+    var mkdocs_page_name = "Data requests";
+    var mkdocs_page_input_path = "requests.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -47,8 +47,12 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <p class="caption"><span class="caption-text">Data and metadata</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../requests/">Data requests</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Data requests</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#data-requests-with-fdsnws">Data requests with FDSNWS</a>
+    </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../metadata/">Metadata formats</a>
                     </li>
@@ -58,12 +62,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Seismic analysis</span></p>
-                <ul class="current">
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../sac/">SAC</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">SEISAN</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../seisan/">SEISAN</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Phase Picking</span></p>
@@ -108,11 +110,11 @@
     
       
         
-          <li>Seismic analysis &raquo;</li>
+          <li>Data and metadata &raquo;</li>
         
       
     
-    <li>SEISAN</li>
+    <li>Data requests</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -124,9 +126,34 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="seisan">SEISAN</h1>
-<p><a href="http://seisan.info">SEISAN site</a></p>
-<p>SEISAN <a href="https://seis.geus.net/software/seisan/seisan.html">documentation</a></p>
+                <h1 id="data">Data</h1>
+<h2 id="data-requests-with-fdsnws">Data requests with FDSNWS</h2>
+<p>Description of FDSN web services: <a href="http://service.iris.edu/fdsnws/">web</a>.</p>
+<ul>
+<li>
+<p><a href="http://service.iris.edu/fdsnws/availability/1/">availability</a>:
+  returns detailed time span information of what timeseries data is available at the archive.</p>
+</li>
+<li>
+<p><a href="http://service.iris.edu/fdsnws/station/1/">station</a>:
+  returns station metadata in FDSN StationXML format or as delimited text.</p>
+</li>
+<li>
+<p><a href="http://service.iris.edu/fdsnws/dataselect/1/">dataselect</a>:
+  provides access to time series data for specified channels and time ranges.</p>
+</li>
+<li>
+<p><a href="http://service.iris.edu/fdsnws/event/1/">event</a>:
+   returns event (earthquake) information from catalogs originating from the NEIC and the ISC data centers.</p>
+</li>
+</ul>
+<p>Most services also have a web interface to build URLs for data request.
+For example, for the <a href="https://www.ign.es/">IGN</a> web service:</p>
+<pre><code>http://193.144.251.72:8080/fdsnws/station/1/builder
+</code></pre>
+<p>To request all responses:</p>
+<pre><code>http://193.144.251.72:8080/fdsnws/station/1/query?level=response&amp;formatted=true&amp;nodata=404
+</code></pre>
               
             </div>
           </div>
@@ -134,10 +161,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../filterpicker/" class="btn btn-neutral float-right" title="Filterpicker">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../metadata/" class="btn btn-neutral float-right" title="Metadata formats">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../sac/" class="btn btn-neutral" title="SAC"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -163,10 +188,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../sac/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../filterpicker/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../metadata/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
